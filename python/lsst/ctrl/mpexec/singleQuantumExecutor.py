@@ -418,6 +418,8 @@ class SingleQuantumExecutor(QuantumExecutor):
             )
             newRefsForDatasetType = updatedInputs[key]
             stored = limited_butler.stored_many(refsForDatasetType)
+            print(f"aaaaaaaaaaaaaaaaaaaa stored:{stored}")
+            print(f"aaaaaaaaaaaaaaaaaaaa refs:{refsForDatasetType}")
             for ref in refsForDatasetType:
                 if stored[ref]:
                     newRefsForDatasetType.append(ref)
